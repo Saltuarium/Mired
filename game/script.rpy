@@ -2,6 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+#Testing
 
 
 define a = Character('Alys', image='alys', callback=name_callback, cb_name='Al')
