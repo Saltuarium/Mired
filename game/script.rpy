@@ -468,7 +468,7 @@ label start:
         "She smiles with a look that says she knows what I'm really thanking her for, then turns back to the birds."
         "Our shoulders nearly brush, and I wonder if she notices."
 
-        scene bg village
+        scene bg talk
 
         "Though none are more than civil to me anymore, one man has seemed more wary of me than any other." 
         "When I'm near he's tense, endeavoring not to be caught as he looks at me out of the corner of his eye."
