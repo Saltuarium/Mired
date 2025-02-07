@@ -469,6 +469,7 @@ label start:
         "Our shoulders nearly brush, and I wonder if she notices."
 
         scene bg talk
+        play music "Conversation01.ogg" fadeout 1.0 fadein 1.0
 
         "Though none are more than civil to me anymore, one man has seemed more wary of me than any other." 
         "When I'm near he's tense, endeavoring not to be caught as he looks at me out of the corner of his eye."
@@ -502,6 +503,7 @@ label start:
         t "...Thank you. For telling me."
         "I force the words out. He nods, curtly, turns away, no longer able to face me."
         "It's no matter; a new blade is the last thing on my mind now. Perhaps I still have work here."
+        stop music fadeout 1.0
 
         scene bg hills
         play ambient "Daytime Ambience.ogg" fadeout 1.0 fadein 1.0
@@ -565,7 +567,7 @@ label start:
             scene bg strange
             with hpunch
             stop ambient fadeout 1.0
-            play music "nightmare.ogg" fadeout 1.0 fadein 1.0
+            play music "Betrayal02.ogg" fadeout 1.0 fadein 1.0
             "For a moment, I fail to register the scream, piercing as it is - shrill with despair and {i}rage{/i}."
             show alys annoyed at rightish
             a "What did you do??!"
