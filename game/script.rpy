@@ -200,7 +200,7 @@ label start:
         "Though I know plenty of people live lives far from any manor, I have traveled enough and seen enough peasant crowds to be surprised at someone not having taken advantage of the entertainment."
         "My wound cleaned and stitched and my mind drawn elsewhere, I lean forward and begin to tell her of what I had seen: dances and feasts, fireworks and sugar sculptures."
 
-        #another cg here? if i have time perhaps
+
         scene bg night 
         show alys neutral at rightish:
             matrixcolor TintMatrix("#3e465e") * SaturationMatrix(0.5)
@@ -226,13 +226,13 @@ label start:
         stop music fadeout 1.0 
         a "Have they been biting?"
         "She asks with a tone of mock innocence, and I realize that despite my expectations, I haven't swatted at a single bug today."
+        scene bg evening
+        with dissolve
         "Instead of the swarm like I saw the previous night, all I could see were those odd glow-worms, more visible now without the sun to compete with."
         "I watch them for a while, head tilted up, before glancing back at Alys with an eyebrow raised. She grins, says nothing."
-        show tierney neutral
         t "...I suppose I've slept in worse places."
         a "That's the spirit. The grass is rather soft as well, if you fancy."
         "I know she's messing with me, and I'm almost tempted to take the bait. But I still have so little energy, and I break into a yawn instead."
-        show alys neutral
         a "I suppose I've been rather cruel, keeping you awake. It's...often not wise, to sleep out here. The weather can change so quickly."
         a "Some think themselves well prepared, only to be lost, caught in the cold rains."
         "I can picture it: stranded in the fog and the biting winds, with no landmarks visible on the expanse of hills."
