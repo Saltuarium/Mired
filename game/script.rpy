@@ -573,6 +573,7 @@ label start:
             "I grasp the pendant she wears beneath her dress, clutching it through the fabric, and clench my fist and shatter it with a sickening snap -"
             play sound "pendant snap.ogg"
             scene bg strange
+            play sound "bass rumble.ogg"
             with hpunch
             stop ambient fadeout 1.0
             "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
@@ -600,7 +601,6 @@ label start:
             a "You must truly like me. You know, if you wanted to spend so much time with me, there were easier ways."
             "I stare at her with a sinking feeling. Whatever is happening isn't passing - won't pass. I'm as snared as she, and the thought makes me dizzy."
             a "I truly, {i}truly{/i} hope this was worth it for you."
-
             return
             
 
