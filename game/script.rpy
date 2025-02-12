@@ -158,6 +158,7 @@ label start:
         a "Stay for a while, and you may find that you prefer the forest, even with its boars."
         "Before I can argue, she shifts, moving slightly closer to me and examining part of the results of her work: the cores she had managed to pluck from their stems."
         a "I've heard said that if a lost person finds bulrushes, they have four of the five things they need for survival: water, food, shelter, and a source of heat. They only lack companionship."
+        play sound "bulrush crunch.ogg" volume 0.5
         "She holds out a handful of the cores. By way of explanation, she takes one and bites into it with a faint crunch."
 
     menu: 
@@ -392,8 +393,10 @@ label start:
         show tierney neutral
         "She circles around our prey, and I remain still, trusting her ability to move silently over mine. Now that I watch for it, I can see the hare snuffling among the peat, wary but still oblivious to our approach."
         "Alys gives me the slightest signal with her hand, and I understand her intent. She lunges forward, angled to drive the hare towards me."
+        play audio ["<silence 2>", "slide fall into mud.ogg"]
         "I surge forward and strike with my knife, but my leg fails me. I slide into the muck, a stinging in my leg, but I laugh, and see Alys is laughing with me."
         "After a moment of fruitlessly wiping the mud from my trousers, we're off again, Alys leading us once more."
+        play audio ["<silence 1>", "rabbit stab.ogg"]
         "The second attempt is more successful. As the hare tries to dash past me, I intercept it, and my blade strikes true behind the shoulders. Alys joins me as I finish it off and hold my prize aloft."
         show alys laugh
         "Alys laughs, the sound bright and wild in the morning air."
@@ -444,6 +447,7 @@ label start:
         "Though some may find it oppressive, I've come to enjoy the way the marsh demands your awareness of it with each breath you take."
         "Those times I do encounter Alys are better; there must be something in her blood the midges dislike, and sitting next to her I am free from their biting myself."
         "We sit on a hill, enjoying the handful of apples I'd brought, and which she had examined like a craftsman inspecting jewels."
+        play sound "apple knife carve.ogg" volume 0.5
         "With my knife she idly carves patterns into the skin of the last one; whorls, like water through the stream."
         "I enjoy bringing her these gifts perhaps even more than she likes receiving them."
         "Addicted to seeing the world through eyes capable of seeing wonder and beauty."
@@ -461,6 +465,7 @@ label start:
         a "Maybe they belonged here too, in their own way."
         "I think of all those who nature had interred here. What led them here, despite the danger?"
         "Had they felt the same pull that I do?"
+        play sound "apple piece cut.ogg"
         "Alys cuts into the apple, finally, knife sinking into its tender flesh, and hands me the piece."
         "It's sweeter than it has any right to be."
         t "Thank you."
