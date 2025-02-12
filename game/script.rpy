@@ -573,11 +573,11 @@ label start:
             "I grasp the pendant she wears beneath her dress, clutching it through the fabric, and clench my fist and shatter it with a sickening snap -"
             play sound "pendant snap.ogg"
             scene bg strange
-            play sound "bass rumble.ogg"
             with hpunch
             stop ambient fadeout 1.0
             "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
             play music "Betrayal02.ogg" fadeout 1.0 fadein 1.0
+            play sound "bass rumble.ogg"
             "For a moment, I fail to register the scream, piercing as it is - shrill with despair and {i}rage{/i}."
             show alys annoyed at rightish
             a "What did you do??!"
