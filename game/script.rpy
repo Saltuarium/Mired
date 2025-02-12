@@ -571,10 +571,11 @@ label start:
             "It's no great task to let her pull me forward into a kiss that threatens to break my resolve. Despite living wilder than a grouse, her skin is deceptively soft, hands free of callouses as she reaches for my waist, my jaw."
             "My free hand raises as if of its own accord, lightly touching her collarbone, until, with a sudden strike -"
             "I grasp the pendant she wears beneath her dress, clutching it through the fabric, and clench my fist and shatter it with a sickening snap -"
-            "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
+            play sound "pendant snap.ogg"
             scene bg strange
             with hpunch
             stop ambient fadeout 1.0
+            "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
             play music "Betrayal02.ogg" fadeout 1.0 fadein 1.0
             "For a moment, I fail to register the scream, piercing as it is - shrill with despair and {i}rage{/i}."
             show alys annoyed at rightish
@@ -632,6 +633,7 @@ label start:
             t "There are other wildernesses. Perhaps we could find one that would suit us."
             "We stand there for what feels like forever, me patiently waiting for however long she needs, before she finally comes to some decision."
             "She takes a step away from me, and for a moment I feel unmoored, more than I thought I would have, but she doesn't move any further."
+            play sound "pendant removed.ogg"
             "Instead, she reaches up, to the cord I've seen hang around her neck, pulling the pendant free from under her dress."
             "Reaching out, she offers it to me with a feigned air of nonchalance, as if it's just a paltry trinket."
             "I take it, not hesitating, but careful. The clay is warm from where it has lain against her skin."
