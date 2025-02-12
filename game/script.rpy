@@ -45,7 +45,7 @@ transform leftish:
 # The game starts here.
 
 label start:
-
+    stop music fadeout 1.0
     show bg lake
     play ambient "Daytime Ambience.ogg" fadeout 1.0 fadein 1.0
     "When I wake in the fen, there is a long moment in which the pain in my leg is all I can consider. I am aware of it before I am aware of myself."
@@ -98,12 +98,15 @@ label start:
     nvl_narr "The journey had been quiet until then. No bandits, no foul weather: just clear trails and clearer skies as we made our way to our job."
     nvl_narr "Then Markus saw the trees rubbed raw, and gestured towards the tracks near it."
     nvl_narr "I scanned the undergrowth, but visibility was low in the thickness of the brush. It shouldn't have been a problem; we weren't here as hunters, and the swine should have had no issue with us."
+    play sound "boar growl and twigs sound.ogg"
     nvl_narr "The snapping of branches was our only warning."
     nvl clear
+    play audio ["<silence 2>", "boar growl 1.ogg"]
     nvl_narr "It erupted from the thicket like a demon loosed, bristled mane and yellowed tusk. Though Markus carried a spear, it had served him more as a walking stick on the journey, and he barely managed to bring it to bear before the beast slammed into him. The boar moved forward even as it was gouged, slamming Markus into a tree with a sickening crunch."
     nvl_narr "It bought enough time for Jakob and I to unsheathe our swords and brace as it wheeled with a speed that belied its heft. Its hide reflected my blade like armor, and as it charged past pain exploded through my leg as a tusk caught me, the force of it knocking me to the ground."
     nvl_narr "Jakob was shouting, though I couldn't tell what he said. The boar's hooves kicked up clods of earth as it wheeled for another charge at me. I had raised to my feet as quickly as I could, and despite the agony I was able to move out of the way and strike the animal with a blade to the neck."
     nvl clear
+    play sound "boar squeal injured.ogg"
     nvl_narr "Everything collapsed into pain and sound. The horrid shriek of the animal, arterial spray gushing like an endless font. Markus, the bone in his arm exposed to the air. Retreating like hunted animals, slashing and giving ground, not willing to stop even when it seemed that the beast was done with it."
     nvl_narr "We fled out of the trees towards the wetlands, unwilling to stay penned and unable to see in the dense foliage, praying the boar's bulk over the soggy ground would hinder it more than it did us. Blood soaked my trouser leg, but fear kept me moving in a blur of pain and determination."
     nvl_narr "When the exhaustion began to outweigh the need to keep moving, we found the driest and most stable place we could, tending to our wounds to the best of our ability. Jakob, the least injured, took first watch. And then..."
