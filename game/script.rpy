@@ -45,9 +45,9 @@ transform leftish:
 # The game starts here.
 
 label start:
-    stop music fadeout 1.0
+
     show bg lake
-    play ambient "Daytime Ambience.ogg" fadeout 1.0 fadein 1.0
+    play ambient "Daytime Ambience.ogg" fadein 4.0
     "When I wake in the fen, there is a long moment in which the pain in my leg is all I can consider. I am aware of it before I am aware of myself."
     "I try to ease myself to a sitting position without disturbing my wound, wincing anyway as the movement sets it to throbbing again."
     "Looking at it, it's immediately apparent that the bandages need changing. I can feel a heat coming off of the gash as I gingerly reach towards it, before turning and examining my surroundings."
@@ -89,36 +89,36 @@ label start:
     a "I fear there are few visitors out here."
     show tierney annoyed
     "I curse quietly. After a moment more, I decide to explain yesterday’s attack, and how I had ended up here; without the men who should have been with me and missing - I now realized - more than the supplies that had been lost in the scrum."
+    play music "nightmare.ogg" fadein 10.0
     scene bg black
     pause
     nvl clear
     show bg boar
-    play music "nightmare.ogg" fadeout 1.0 fadein 1.0
     pause
     nvl_narr "The journey had been quiet until then. No bandits, no foul weather: just clear trails and clearer skies as we made our way to our job."
     nvl_narr "Then Markus saw the trees rubbed raw, and gestured towards the tracks near it."
+    stop ambient fadeout 6.0
     nvl_narr "I scanned the undergrowth, but visibility was low in the thickness of the brush. It shouldn't have been a problem; we weren't here as hunters, and the swine should have had no issue with us."
-    play sound "boar growl and twigs sound.ogg"
     nvl_narr "The snapping of branches was our only warning."
     nvl clear
-    play audio ["<silence 2>", "boar growl 1.ogg"]
     nvl_narr "It erupted from the thicket like a demon loosed, bristled mane and yellowed tusk. Though Markus carried a spear, it had served him more as a walking stick on the journey, and he barely managed to bring it to bear before the beast slammed into him. The boar moved forward even as it was gouged, slamming Markus into a tree with a sickening crunch."
     nvl_narr "It bought enough time for Jakob and I to unsheathe our swords and brace as it wheeled with a speed that belied its heft. Its hide reflected my blade like armor, and as it charged past pain exploded through my leg as a tusk caught me, the force of it knocking me to the ground."
     nvl_narr "Jakob was shouting, though I couldn't tell what he said. The boar's hooves kicked up clods of earth as it wheeled for another charge at me. I had raised to my feet as quickly as I could, and despite the agony I was able to move out of the way and strike the animal with a blade to the neck."
     nvl clear
-    play sound "boar squeal injured.ogg"
     nvl_narr "Everything collapsed into pain and sound. The horrid shriek of the animal, arterial spray gushing like an endless font. Markus, the bone in his arm exposed to the air. Retreating like hunted animals, slashing and giving ground, not willing to stop even when it seemed that the beast was done with it."
     nvl_narr "We fled out of the trees towards the wetlands, unwilling to stay penned and unable to see in the dense foliage, praying the boar's bulk over the soggy ground would hinder it more than it did us. Blood soaked my trouser leg, but fear kept me moving in a blur of pain and determination."
     nvl_narr "When the exhaustion began to outweigh the need to keep moving, we found the driest and most stable place we could, tending to our wounds to the best of our ability. Jakob, the least injured, took first watch. And then..."
     nvl clear
-    stop music fadeout 1.0 
+    
     scene bg lake
     show alys neutral at rightish
     show tierney sad at leftish
+    stop music fadeout 30.0
     "I stop, shake my head."
     "She's paused from her work and is looking at me with a furrowed brow, a look of sympathy that tugs at my heart."
     a "And what do you expect has happened?"
     "There seemed to be a simple answer…"
+    play ambient "Daytime Ambience.ogg" fadein 10.0
     menu:
         "They abandoned me.":
             show tierney annoyed
@@ -151,17 +151,16 @@ label start:
         show tierney neutral
         "I almost laugh - with my wound fully visible to her, I am surprised she would describe me as being alright." 
         "I had half expected her to grow faint at the sight of it when I started, but she seems nonplussed, sometimes watching me with mild interest, but mostly focusing on her own work."
+        play music "Alys01.ogg" fadein 10.0
         "The woman is strange in many ways, and I wonder what has brought her here. I wouldn’t have thought to traverse even slightly as far as I have into the wetlands if we hadn’t been desperately fleeing a set of angry tusks."
         show tierney raise
         t "Oh? Are you well acquainted with the mire? Though it isn’t the most pleasant to trudge through, I have found it far more appealing than the woods. No offense, lady…?"
         a "Alys."
-        play music "Alys01.ogg" fadeout 1.0 fadein 1.0
         "She seems wryly amused - by the title or my assumptions about the region?"
         show alys hand
         a "Stay for a while, and you may find that you prefer the forest, even with its boars."
         "Before I can argue, she shifts, moving slightly closer to me and examining part of the results of her work: the cores she had managed to pluck from their stems."
         a "I've heard said that if a lost person finds bulrushes, they have four of the five things they need for survival: water, food, shelter, and a source of heat. They only lack companionship."
-        play sound "bulrush crunch.ogg" volume 0.5
         "She holds out a handful of the cores. By way of explanation, she takes one and bites into it with a faint crunch."
 
     menu: 
@@ -203,16 +202,14 @@ label start:
         a "Melee? These weddings do seem rather dangerous."
         "Though I know plenty of people live lives far from any manor, I have traveled enough and seen enough peasant crowds to be surprised at someone not having taken advantage of the entertainment."
         "My wound cleaned and stitched and my mind drawn elsewhere, I lean forward and begin to tell her of what I had seen: dances and feasts, fireworks and sugar sculptures."
-
-
+        #another cg here? if i have time perhaps
         scene bg night 
         show alys neutral at rightish:
             matrixcolor TintMatrix("#3e465e") * SaturationMatrix(0.5)
         show tierney neutral at leftish:
             matrixcolor TintMatrix("#3e465e") * SaturationMatrix(0.5)
         with dissolve
-        stop ambient fadeout 1.0
-        play ambient "Nighttime Ambience.ogg" fadeout 1.0 fadein 1.0
+        play ambient "Nighttime Ambience.ogg" fadeout 0.5 fadein 0.5
         "I hardly notice when the sky begins to turn dark. I must have been asleep longer than I realized."
         show tierney annoyed
         "I curse my own distraction. It feels exposed out on the fens; while I can see quite a distance, I would prefer a place with more cover when camping by myself."
@@ -227,29 +224,27 @@ label start:
         "Despite her short hair, there's something almost delicate about her manner. I would expect to see her examining bolts of cloth for a new dress, not in the slough."
         "Already I can feel the air start to get colder, and I have more sleeves and layers than she."
         t "With the way the midges bite, I would rather have the tent."
-        stop music fadeout 1.0 
         a "Have they been biting?"
         "She asks with a tone of mock innocence, and I realize that despite my expectations, I haven't swatted at a single bug today."
-        scene bg evening
-        with dissolve
         "Instead of the swarm like I saw the previous night, all I could see were those odd glow-worms, more visible now without the sun to compete with."
         "I watch them for a while, head tilted up, before glancing back at Alys with an eyebrow raised. She grins, says nothing."
+        show tierney neutral
         t "...I suppose I've slept in worse places."
         a "That's the spirit. The grass is rather soft as well, if you fancy."
         "I know she's messing with me, and I'm almost tempted to take the bait. But I still have so little energy, and I break into a yawn instead."
+        show alys neutral
         a "I suppose I've been rather cruel, keeping you awake. It's...often not wise, to sleep out here. The weather can change so quickly."
         a "Some think themselves well prepared, only to be lost, caught in the cold rains."
         "I can picture it: stranded in the fog and the biting winds, with no landmarks visible on the expanse of hills."
+        stop music fadeout 10.0
         "A fire would be a comfort, but I don't trust my ability to find dry kindling in the dying light."
         "But the strange light of the glow-worms was some consolation."
         "Alys rests her chin on her hand, considering me."
         a "But I think you'll be alright."
         
-        stop ambient fadeout 1.0
         scene bg lake
         with None
-        play ambient "Daytime Ambience.ogg" fadeout 1.0 fadein 1.0
-        play music "Wetlands01.ogg" fadeout 1.0 fadein 1.0
+        play ambient "Daytime Ambience.ogg" fadeout 0.5 fadein 0.5
         show tierney neutral at center
         "I stand, testing my balance on my wounded leg. It stings in protest, but I've powered through worse. When I tentatively raise my heels, I'm nearly brought down by the pain, but I close my eyes and take a second to breathe through clenched teeth."
         show tierney neutral at leftish 
@@ -272,10 +267,12 @@ label start:
         "She smiles and shakes her head, but gives me no reply."
         "Though I'm carrying little enough myself, it's strange to see she has no belongings to gather. It is as if she materialized out of the fog with nothing but the clothes on her back. I feel that if I look away, I may turn back to find she'd never been there."
         "But at the same time, she feels like the only thing real here in the quiet."
+        play music "Wetlands01.ogg" fadein 10.0
         "Wherever she's going, she needs no time to consider it. She moves without waiting to see if I follow."
         "I know I'm slower than I normally would be, but either it's more dire than I thought or she's faster than I could have anticipated. She walks with the ease of a woman on a clear path, while I clumsily pick my way along after her like a clumsy colt learning to walk."
         "But without the dire need to run, I adjust before long. The pain settles into a more ignorable ache, and I can appreciate my surroundings more." 
         show alys neutral
+        
         "More signs of spring exist here than there had been in the woods; flowers bud and insects fly about the new shoots."
         "At times Alys stops, inspecting or collecting things as we go, but I pay her little mind. Small birds, none quite familiar to me, fly low overhead, hunting among the sedges. It's peaceful here, but the peace is soon troubled."
         "Alys gestures to the bottom of the hill, though as I lean to look she places a hand out, cautioning me not to fall."
@@ -315,8 +312,6 @@ label start:
         show tierney neutral at leftish
         show alys neutral at rightish
         with dissolve
-        stop music fadeout 1.0
-        play music "Alys01.ogg" fadeout 1.0 fadein 1.0
         "Finally she turns away, and I follow her. Past the vast expanses of the peatland there are trees, though the swamp is still a far cry from the forest."
         "I don't mention my pain, but she notices it and calls for us to rest and catch our breath, though she doesn't seem the slightest bit tired."
         "The afternoon light filters green through the canopy overhead, casting dappled shadows across the fairly dry patch of ground where I gratefully sit."
@@ -346,6 +341,7 @@ label start:
         a "He was always quite taken with them. Collecting shed skins like jewels."
         "Her smile turns wry. I'm not sure if I want to ask my next question."
         t "What happened to him?"
+        stop music fadeout 20.0
         show alys contemplates
         a "He grew up. There are better things for a young man to do than traipse through the swamp."
         "She shrugs, a show of nonchalance, though I can sense her nostalgia."
@@ -357,7 +353,7 @@ label start:
         show alys regret
         a "It's the way of things. The living die, the young grow old, and it all begins again. Precious ephemera."
         "I lean against the trunk of a tree, abandoning my own crude project to watch her, and consider."
-        stop music fadeout 1.0
+        
 
         scene bg marsh
         with fade
@@ -378,10 +374,10 @@ label start:
         show tierney raise
         "My eyebrows raise."
         t "You hunt so freely?"
+        play music "tierney01.ogg" fadein 15.0
         a "Let any lord who wishes feel free to challenge me."
         show alys neutral
         show tierney neutral
-        play music "tierney01.ogg" fadeout 1.0 fadein 1.0
         "Alys moves through the peatlands like mist, each step precise and soundless. I feel clumsy next to her, boots sinking deeper into the soft earth than her sandaled feet ever seem to."
         "The morning fog still clings to the ground, blurring the boundaries between earth and bog."
         "I expect to find little apart from birds beyond what I can catch without a bow and arrow, but her confidence is founded: she gestures for me to stop, then points ahead with the faintest of whispers."
@@ -396,10 +392,8 @@ label start:
         show tierney neutral
         "She circles around our prey, and I remain still, trusting her ability to move silently over mine. Now that I watch for it, I can see the hare snuffling among the peat, wary but still oblivious to our approach."
         "Alys gives me the slightest signal with her hand, and I understand her intent. She lunges forward, angled to drive the hare towards me."
-        play audio ["<silence 2>", "slide fall into mud.ogg"]
         "I surge forward and strike with my knife, but my leg fails me. I slide into the muck, a stinging in my leg, but I laugh, and see Alys is laughing with me."
         "After a moment of fruitlessly wiping the mud from my trousers, we're off again, Alys leading us once more."
-        play audio ["<silence 1>", "rabbit stab.ogg"]
         "The second attempt is more successful. As the hare tries to dash past me, I intercept it, and my blade strikes true behind the shoulders. Alys joins me as I finish it off and hold my prize aloft."
         show alys laugh
         "Alys laughs, the sound bright and wild in the morning air."
@@ -422,9 +416,9 @@ label start:
         "It should make me nervous. But I find myself nodding."
         show tierney smile
         t "I think I'd like that."
-        stop music fadeout 1.0 
 
         scene bg village
+        stop ambient fadeout 30.0
         nvl_narr "It is a relief to be back among humanity, even as sparse as it is in the small village."
         nvl_narr "I have little left to me after the loss of our packs, but I must look pitiable, because when I enter the inn the owner offers me a chance to wash up in exchange for the hare pelt I carry."
         nvl_narr "Gratefully, I hand over the skin that has begun to stink, and scrub the past few days away."
@@ -446,15 +440,16 @@ label start:
         scene bg lake
         show tierney c neutral at leftish
         show alys neutral at rightish
+        play ambient "Daytime Ambience.ogg" fadein 4.0
         "While summer brings its heat, I am drawn to the wetlands still, despite its suffocating humidity."
         "Though some may find it oppressive, I've come to enjoy the way the marsh demands your awareness of it with each breath you take."
         "Those times I do encounter Alys are better; there must be something in her blood the midges dislike, and sitting next to her I am free from their biting myself."
         "We sit on a hill, enjoying the handful of apples I'd brought, and which she had examined like a craftsman inspecting jewels."
-        play sound "apple knife carve.ogg" volume 0.5
         "With my knife she idly carves patterns into the skin of the last one; whorls, like water through the stream."
         "I enjoy bringing her these gifts perhaps even more than she likes receiving them."
         "Addicted to seeing the world through eyes capable of seeing wonder and beauty."
         "Glad that I can feel as though I provide something for her, even if she doesn't need it."
+        stop music fadeout 20.0 
         "Beneath us, cranes leap and carouse gracefully in the water, unafraid as we watch."
         "Looking back, between the birds and Alys, there's a pang in my chest. As happy as I am to be here, I already feel the sadness of knowing I'll be leaving."
         t "I envy you. You have a place to belong. I feel out of place wherever I go, a ghost haunting my own life."
@@ -468,7 +463,6 @@ label start:
         a "Maybe they belonged here too, in their own way."
         "I think of all those who nature had interred here. What led them here, despite the danger?"
         "Had they felt the same pull that I do?"
-        play sound "apple piece cut.ogg"
         "Alys cuts into the apple, finally, knife sinking into its tender flesh, and hands me the piece."
         "It's sweeter than it has any right to be."
         t "Thank you."
@@ -477,8 +471,8 @@ label start:
         "Our shoulders nearly brush, and I wonder if she notices."
 
         scene bg talk
-        play music "Conversation01.ogg" fadeout 1.0 fadein 1.0
-
+        
+        stop ambient fadeout 20.0
         "Though none are more than civil to me anymore, one man has seemed more wary of me than any other." 
         "When I'm near he's tense, endeavoring not to be caught as he looks at me out of the corner of his eye."
         "I'm content to give him his space in turn: something foul twists in my chest when I think about him, though I'm aware I don't truly know the man, can lay no crime at his feet."
@@ -487,6 +481,7 @@ label start:
         "He's not working the metal when I approach, but managing his tools. I'm glad to catch him in a quiet moment."
         "The man was clearly torn between his distaste for me and his desire to prove something, either to me or himself."
         "Finally he seems to have come to some decision, and looks me in the eyes for the first time."
+        play music "Betrayal01.ogg" fadein 10.0
         m "You've seen her."
         "I know who he means, of course. I nod, but he is quiet for a while before I finally prompt him."
         t "...What happened?"
@@ -497,7 +492,6 @@ label start:
         "Did he not know her name, or could he simply not stand to speak it?"
         m "It went on for longer than it should have. Months. But I went once, without her, and -"
         "His voice falters."
-        stop ambient fadeout 1.0
         m "I found her. My mother."
         m "When I spoke to her, she said she hadn't even known she was there. But she must have. Lying there - rotting. But not enough for me not to know her."
         m "I couldn't bring her body back. No one would have helped me. I wanted to take her bracelet, at least, but I - I couldn't touch her."
@@ -511,10 +505,10 @@ label start:
         t "...Thank you. For telling me."
         "I force the words out. He nods, curtly, turns away, no longer able to face me."
         "It's no matter; a new blade is the last thing on my mind now. Perhaps I still have work here."
-        stop music fadeout 1.0
+        stop music fadeout 20.0
 
         scene bg hills
-        play ambient "Daytime Ambience.ogg" fadeout 1.0 fadein 1.0
+        play ambient "Daytime Ambience.ogg" fadein 15.0
         "Part of me wonders if I will even be able to find her this time, or if I would wander alone once again."
         "Perhaps she would find me and lead me astray, so she wouldn't have to face this conversation."
         "Was I retreading old ground? Had others gone through these steps with her before?"
@@ -566,18 +560,16 @@ label start:
             "I can no more let her continue than I could leave a viper among sleeping babes."
             "I endeavor to let none of this show on my face as I turn to her, my smile unforced despite everything."
             "I look into her eyes, reach out to cup the back of her neck. Were I not on such alert, I might not have noticed the way she leans imperceptibly into my touch."
+            stop ambient fadeout 15.0
             "I brush my thumb across the pleasant fuzz of her shorn hair at the base of her skull, and watch her watch me with a mischievous light in her eyes."
             scene bg kiss
             "It's no great task to let her pull me forward into a kiss that threatens to break my resolve. Despite living wilder than a grouse, her skin is deceptively soft, hands free of callouses as she reaches for my waist, my jaw."
             "My free hand raises as if of its own accord, lightly touching her collarbone, until, with a sudden strike -"
             "I grasp the pendant she wears beneath her dress, clutching it through the fabric, and clench my fist and shatter it with a sickening snap -"
-            play sound "pendant snap.ogg"
+            play music "Betrayal02.ogg" fadein 2.0
+            "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
             scene bg strange
             with hpunch
-            stop ambient fadeout 1.0
-            "The world lurches into darkness. There is a burning in the back of my eyes, and my nose stings with a sharp, sickening stench."
-            play music "Betrayal02.ogg" fadeout 1.0 fadein 1.0
-            play sound "bass rumble.ogg"
             "For a moment, I fail to register the scream, piercing as it is - shrill with despair and {i}rage{/i}."
             show alys annoyed at rightish
             a "What did you do??!"
@@ -601,15 +593,16 @@ label start:
             a "You must truly like me. You know, if you wanted to spend so much time with me, there were easier ways."
             "I stare at her with a sinking feeling. Whatever is happening isn't passing - won't pass. I'm as snared as she, and the thought makes me dizzy."
             a "I truly, {i}truly{/i} hope this was worth it for you."
+
             return
             
 
         label redeem:
-            play music "Tierney01.ogg" fadeout 1.0 fadein 1.0
             show tierney c neutral
             "I take a moment to sort through all I want to say. It's hard to know where to begin."
             t "You know...I don't believe you're as callous as you pretend to be."
             "Her incredulous expression nearly makes me laugh, but I fight it down."
+            play music "Tierney01.ogg" fadein 10.0
             t "How about this..."
             show alys neutral
             "Gently, I touch her arm and face her. She looks in my eyes searchingly, seeming almost - worried?"
@@ -630,10 +623,10 @@ label start:
             show alys neutral
             t "Hmm. Well, I think you'd look rather nice in a wimple."
             "She curls her lip, but I can tell she's amused, despite herself."
+            stop ambient fadeout 20.0
             t "There are other wildernesses. Perhaps we could find one that would suit us."
             "We stand there for what feels like forever, me patiently waiting for however long she needs, before she finally comes to some decision."
             "She takes a step away from me, and for a moment I feel unmoored, more than I thought I would have, but she doesn't move any further."
-            play sound "pendant removed.ogg"
             "Instead, she reaches up, to the cord I've seen hang around her neck, pulling the pendant free from under her dress."
             "Reaching out, she offers it to me with a feigned air of nonchalance, as if it's just a paltry trinket."
             "I take it, not hesitating, but careful. The clay is warm from where it has lain against her skin."
@@ -658,10 +651,10 @@ label start:
             return
 
         label join:
-            play music "Alys01.ogg" fadeout 1.0 fadein 1.0
             t "I don't have your taste for cruelty."
             "A twinge of annoyance on her brow, but for now she does not speak."
             show tierney c sad
+            play music "Alys01.ogg" fadein 10.0
             t "I'm just...tired."
             "She places a hand on my elbow, and I lean into her touch."
             show alys regret
